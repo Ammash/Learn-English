@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu">
+
+    <com.google.android.gms.ads.AdView
+        android:layout_marginTop="30dp"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-4722192482253222/2569672842">
+    </com.google.android.gms.ads.AdView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/r"
+     >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/words"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/words"
+            android:scaleType="fitXY"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:onClick="toWords"
+            android:layout_alignParentLeft="true"
+            />
+        <ImageView
+            android:id="@+id/quiz"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/quiz"
+            android:scaleType="fitXY"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:onClick="toQuiz"
+            />
+        <ImageView
+            android:id="@+id/tips"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/tips"
+            android:scaleType="fitXY"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/words"
+            android:onClick="toTips"
+            android:layout_alignParentLeft="true"
+            />
+        <ImageView
+            android:id="@+id/about"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/about"
+            android:scaleType="fitXY"
+            android:layout_alignParentRight="true"
+            android:padding="5dp"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/quiz"
+            android:onClick="toAboutMe"
+            />
+       <Button
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="نطق الكلمات"
+           android:layout_below="@id/about"
+           android:background="@color/colorPrimaryDark"
+           android:textColor="#ffffff"
+           android:textSize="30dp"
+           android:layout_margin="50dp"
+           android:onClick="toSpeakWords"
+           />
+
+
+    </RelativeLayout>
+
+</ScrollView>
+
+
+</RelativeLayout>
